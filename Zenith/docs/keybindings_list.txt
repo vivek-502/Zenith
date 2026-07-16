@@ -1,74 +1,75 @@
------------------   General Applications ----------------
-----------------------------------------------------------
-SUPER + Enter | Open Terminal (Kitty)
-SUPER + Shift + Enter | Quick Terminal (Kitty --class quick-terminal)
-SUPER + Shift + E | Open File Manager (Nautilus)
-SUPER + Shift + B | Open Browser (firefox)
-SUPER + Space | App Launcher (Rofi)
-SUPER + Alt + Space | Walker Menu
-SUPER + I | Install Menu
-SUPER + Shift + N | Network Manager (nmtui)
-SUPER + X | Notification Panel (swaync)
-SUPER + M | Mute Window Script
+###   General Applications
+| --- | --- |
+| Open Terminal | `SUPER + Return` |
+| Quick Terminal | `SUPER + SHIFT + Return` |
+| File Manager | `SUPER + SHIFT + E` |
+| Browser | `SUPER + SHIFT + B` |
+| App Launcher | `SUPER + SPACE` |
+| Walker Menu | `SUPER + ALT + SPACE` |
+| Install Menu | `SUPER + I` |
+| Network (nmtui) | `SUPER + SHIFT + N` |
+| Notifications | `SUPER + X` |
+| Mute Window Script | `SUPER + M` |
 
-------------------   Window Management ------------------
-----------------------------------------------------------
-SUPER + W | Close Focused Window
-SUPER + Q | Force Kill Window
-SUPER + F | Toggle Fullscreen
-SUPER + T | Toggle Floating Mode
-SUPER + H | Pseudo Tiling (Dwindle)
-SUPER + J | Toggle Split (Dwindle)
-SUPER + G | Group Windows
-SUPER + Tab | Cycle Grouped Windows (Next)
-SUPER + Shift + Tab | Cycle Grouped Windows (Prev)
-SUPER + D | Dock Picker
-SUPER + Shift + D | Send to Dock
+###   Window & Group Management
+| --- | --- |
+| Close Window | `SUPER + W` |
+| Force Kill Window | `SUPER + Q` |
+| Toggle Fullscreen | `SUPER + F` |
+| Toggle Floating | `SUPER + T` |
+| Pseudo Tiling | `SUPER + H` |
+| Toggle Split | `SUPER + J` |
+| Group Toggle | `SUPER + G` |
+| Cycle Groups | `SUPER + TAB` |
+| Dock Picker | `SUPER + D` |
+| Send to Dock | `SUPER + SHIFT + D` |
 
--------------------   Focus & Movement ------------------
-----------------------------------------------------------
-SUPER + Arrow Keys | Move Focus
-SUPER + Shift + Arrow Keys | Move Window
-SUPER + Ctrl + Arrow Keys | Resize Window
-SUPER + Left Click | Move Window (Drag)
-SUPER + Right Click | Resize Window (Drag)
+###   Focus, Movement & Resize
+| --- | --- |
+| Move Focus | `SUPER + Arrows` |
+| Move Window | `SUPER + SHIFT + Arrows` |
+| Resize Window | `SUPER + CTRL + Arrows` |
+| Drag (Mouse) | `SUPER + Left Click` |
+| Resize (Mouse) | `SUPER + Right Click` |
 
-----------------------   Workspaces ---------------------
-----------------------------------------------------------
-SUPER + 1–0 | Switch Workspace (1–10)
-SUPER + Shift + 1–0 | Move Window to Workspace
-SUPER + S | Toggle Scratchpad (Special Workspace)
-SUPER + Shift + S | Move Window to Scratchpad
-SUPER + Scroll Up/Down | Cycle Workspaces
-SUPER + L | Workspace Script
+###   Workspaces
+| --- | --- |
+| Switch Workspace | `SUPER + 1–0` |
+| Move to Workspace | `SUPER + SHIFT + 1–0` |
+| Scratchpad Toggle | `SUPER + S` |
+| Move to Scratchpad | `SUPER + SHIFT + S` |
+| Cycle Workspaces | `SUPER + Scroll Up/Down` |
+| Workspace Script | `SUPER + L` |
 
--------------------   Media & Hardware ------------------
-----------------------------------------------------------
-Volume Up/Down | Adjust Volume
-Mute | Toggle Audio Mute
-Mic Mute | Toggle Microphone Mute
-Brightness Up/Down | Adjust Brightness
-Media Next/Prev | Control Media Playback
-Play/Pause | Toggle Playback
-SUPER + Shift + A | Sound Control (Wiremix)
+###   Media & Hardware
+| --- | --- |
+| Volume Control | `XF86Audio Raise/Lower/Mute` |
+| Mic Mute | `XF86AudioMicMute` |
+| Brightness | `XF86MonBrightness Up/Down` |
+| Media Controls | `XF86Audio Next/Prev/Play/Pause` |
+| Sound Control | `SUPER + SHIFT + A` |
 
-------------------  System & Utilities ------------------
-----------------------------------------------------------
-SUPER + Ctrl + L | Lock Screen
-SUPER + Escape | Power Menu
-SUPER + P | Power Profile Menu
-SUPER + Alt + W | Toggle Waybar
-Print Screen | Screenshot (Region)
-SUPER + V | Clipboard History
-SUPER + C | Color Picker
-SUPER + K | Keybinds Help Menu
-SUPER + O | OCR4Linux
+###   System & Utilities
+| --- | --- |
+| Lock Screen. | `SUPER + CTRL + L` |
+| .Power Menu. | `SUPER + ESCAPE` |
+| .Power Profile. | `SUPER + P` |
+| .Toggle Waybar. | `SUPER + ALT + W` |
+| Screenshot | `PRINT` |
+| Clipboard | `SUPER + V` |
+| Color Picker | `SUPER + C` |
+| Keybinds Help | `SUPER + K` |
+| OCR Scan | `SUPER + O` |
 
------------------- 🎨 Theming & Styling ------------------
-----------------------------------------------------------
-SUPER + Alt + Ctrl + Space | Style Switcher
-SUPER + Shift + Ctrl + Space | Theme by Wallpaper
-SUPER + Shift + Space | Background Selector
-CTRL + Shift + Space | Live Wallpaper
-SUPER + Shift + W | Toggle Waybar Position
-
+### 🎨 Theming & Styling
+| --- | --- |
+| Style Switcher | `SUPER + ALT + S` |
+| Theme by Wallpaper | `SUPER + ALT + T` |
+| Background Selector | `SUPER + ALT + B` |
+| Live Wallpaper | `SUPER + ALT + L` |
+| Waybar Position | `SUPER + SHIFT + W` |
+| Hyprland Tweaks | `SUPER + ALT + H` |
+| Icon Selector | `SUPER + ALT + I` |
+| Font Selector | `SUPER + ALT + F` |
+| Opacity Menu | `SUPER + ALT + O` |
+| Cursor Selector | `SUPER + ALT + C` |

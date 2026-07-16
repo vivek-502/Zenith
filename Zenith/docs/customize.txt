@@ -1,0 +1,37 @@
+
+# Customizing Zenith
+
+Zenith uses an automated system to swap configurations. Never paste your custom configs directly into the default Waybar, Rofi, or Hyprlock folders, as these will be overwritten whenever you select a new style via `SUPER + ALT + S`.
+
+### Where to Place Your Custom Styles
+
+To add your own themes so the system recognizes them, place them in the following directories:
+
+#### 1. Waybar
+
+Place your config and CSS files here:
+
+* `~/.config/Zenith/extra-styles/waybar/YOUR_STYLE_NAME/config.jsonc`
+* `~/.config/Zenith/extra-styles/waybar/YOUR_STYLE_NAME/style.css`
+
+#### 2. Rofi Menus
+
+Organize your menus by category. Create your subfolder under the appropriate type:
+
+* `~/.config/Zenith/extra-styles/rofi/applauncher/YOUR_STYLE_NAME/config.rasi`
+* `~/.config/Zenith/extra-styles/rofi/powermenu/YOUR_STYLE_NAME/powermenu.rasi`
+* `~/.config/Zenith/extra-styles/rofi/walker/YOUR_STYLE_NAME/walker.rasi`
+* `~/.config/Zenith/extra-styles/rofi/themeselector/YOUR_STYLE_NAME/theme-selector.rasi`
+
+#### 3. Hyprlock
+
+Place your custom lock screen config here:
+
+* `~/.config/Zenith/extra-styles/hyprlock/YOUR_STYLE_NAME/hyprlock.conf`
+
+### How to Apply Your Changes
+
+1. Place your files in the directories mentioned above.
+2. Press `SUPER + ALT + S` to open the **Style Switcher** menu.
+3. select option from rofi, hyprlock and waybar
+4. Select your `YOUR_STYLE_NAME` from the list.

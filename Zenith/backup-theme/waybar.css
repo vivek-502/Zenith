@@ -1,7 +1,22 @@
-@define-color background #d0d0c8;
 
-@define-color foreground #242424;
+@define-color background rgba(26, 15, 10, 1);
 
-@define-color selected #de6a41;
+@define-color foreground #d1d7d5;
 
-@define-color secondary_background rgba(208, 208, 200, 0.7);
+@define-color selected #9E5B36;
+
+@define-color color-2 #D4A268;
+@define-color color-3 #3A5887;
+@define-color color-4 #526E95;
+@define-color color-5 #867B86;
+@define-color color-6 #6D90AD;
+@define-color color-7 #d1d7d5;
+@define-color color-8 #929695;
+@define-color color-9 #9E5B36;
+@define-color color-10 #D4A268;
+@define-color color-11 #3A5887;
+@define-color color-12 #526E95;
+
+@define-color secondary_background rgba(26, 15, 10, 0.4);
+@define-color overlay_background rgba(255, 255, 255, 0.08);
+

@@ -1,23 +1,25 @@
+
 /* ---------- GLOBAL ---------- */
 * {
-    background:                  rgba(208, 208, 200, 95%);
-    background-color:            rgba(208, 208, 200, 0%);
+    background:                  rgba(26, 15, 10, 0.9);
+    background-color:            rgba(26, 15, 10, 0);
 
-    foreground:                  rgba(36, 36, 36, 100%);
+    foreground:                  rgba(209, 215, 213, 1);
     normal-foreground:           @foreground;
     alternate-normal-foreground: @foreground;
 
-    bordercolor:                 rgba(61, 62, 59, 100%);
+    bordercolor:                 rgba(146, 150, 149, 1);
     border-color:                @bordercolor;
-    separatorcolor:              rgba(36, 36, 36, 10%);
+    separatorcolor:              rgba(146, 150, 149, 0.1);
 
-    selected-normal-background:  rgba(222, 106, 65, 80%);
-    selected-normal-foreground:  rgba(36, 36, 36, 100%);
+    selected-normal-background:  rgba(212, 162, 104, 1);
+    selected-normal-foreground:  rgba(209, 215, 213, 1);
 
-    active-foreground:           rgba(36, 36, 36, 100%);
+    active-foreground:           rgba(209, 215, 213, 1);
 
-    normal-background:           rgba(208, 208, 200, 0%);
-    alternate-normal-background: rgba(208, 208, 200, 0%);
-    input-background:            rgba(222, 106, 65, 10%);     
+    normal-background:           rgba(26, 15, 10, 0);
+    alternate-normal-background: rgba(26, 15, 10, 0);
+    input-background:            rgba(212, 162, 104, 0.1);     
     spacing: 6;
 }
+
