@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. RAM Injection
-# Start the selector instantly. No disk-write here, because we're about 
+# Start the selector instantly. No disk-write here, because we're about
 # to do heavy IO operations below.
 hyprctl eval "dofile('$HOME/.config/rofi/animations/Power_menu_anim.lua')"
 killall -SIGUSR1 waybar
@@ -40,7 +40,7 @@ case "$CHOICE" in
     "$HIBERNATE") systemctl hibernate ;;
     "$RESTART") systemctl reboot ;;
     "$SHUTDOWN") systemctl poweroff ;;
-    "$LOGOUT") hyprctl dispatch exit ;;
+    "$LOGOUT") hyprctl dispatch 'hl.dsp.exit()' ;;
 esac
 
 killall -SIGUSR1 waybar
