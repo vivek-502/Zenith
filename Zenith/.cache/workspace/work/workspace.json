@@ -1,0 +1,53 @@
+[
+  {
+    "address": "0x56419b9cf8d0",
+    "class": "org.gnome.TextEditor",
+    "title": "script.sh (~/work/ricing/project) - Text Editor",
+    "workspace": 2,
+    "monitor": 0,
+    "floating": false,
+    "fullscreen": 0,
+    "at": [
+      672,
+      13
+    ],
+    "size": [
+      595,
+      774
+    ]
+  },
+  {
+    "address": "0x56419b9d7ff0",
+    "class": "org.gnome.Nautilus",
+    "title": "project",
+    "workspace": 2,
+    "monitor": 0,
+    "floating": false,
+    "fullscreen": 0,
+    "at": [
+      65,
+      13
+    ],
+    "size": [
+      595,
+      381
+    ]
+  },
+  {
+    "address": "0x56419b9cc880",
+    "class": "kitty",
+    "title": "~/work/ricing/project",
+    "workspace": 2,
+    "monitor": 0,
+    "floating": false,
+    "fullscreen": 0,
+    "at": [
+      65,
+      406
+    ],
+    "size": [
+      595,
+      381
+    ]
+  }
+]

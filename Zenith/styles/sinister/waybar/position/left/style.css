@@ -1,0 +1,105 @@
+@import '../Zenith/current/theme/waybar.css';
+@import "../waybar/font.css";
+
+* {
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: @background; /* Transparent so we can see gaps between modules */
+}
+
+/* THE "ISLANDS" 
+   We style the container boxes instead of the window to get that separated look 
+*/
+
+.modules-center, .modules-right {
+    background-color: @overlay_background; /* Dark grey background */
+    border-radius: 7px;       /* High border radius for pill shape */
+    padding: 10px 4px;         /* Vertical padding inside the pill */
+    margin: 5px 5px;       
+    color: @foreground;      /* Spacing between the islands */
+}
+
+/* --- TOP MODULE (Power & Workspaces) --- */
+
+#custom-logo {
+    margin-bottom: 0px;
+    padding: 10px 2px 10px 0px;
+    margin: 5px 5px;
+    background: @overlay_background;
+    border-radius: 7px;
+    color: @foreground;
+
+    font-size: 15px;
+}
+
+#workspaces {
+    background: transparent;
+    margin: 5px 5px;
+    background: @overlay_background;
+    border-radius: 7px;
+    padding: 10px 4px;
+
+    color: @foreground;
+}
+
+#workspaces button {
+    background: @background;
+    padding: 5px 8px;
+    margin: 2px 0;
+    border-radius: 7px; /* Circular hover effect */
+
+    color: @foreground;
+}
+
+#workspaces button.active {
+    color: @background;
+    background: @selected;
+}
+
+#workspaces button.urgent {
+    color: #f38ba8;
+}
+
+/* --- CENTER MODULE (Clock) --- */
+
+#clock {
+    font-size: 12px;
+}
+
+/* --- BOTTOM MODULE (System Tray) --- */
+
+#custom-bluetooth {
+    font-size: 14px; /* Smaller dot */
+    margin-bottom: 0px;
+}
+
+#pulseaudio {
+    margin: 6px 0;
+}
+
+#network {
+    margin: 6px 0;
+}
+
+#battery {
+    margin-top: 6px;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f38ba8;
+    color: #1e1e2e;
+}
+
+
+/* Remove default borders and backgrounds */
+#waybar.empty #window {
+    background-color: transparent;
+}
+
+#tray {
+    margin-bottom: 7px;
+}

@@ -1,0 +1,125 @@
+@import "../Zenith/current/theme/config.rasi"
+@import "../rofi/font.rasi"
+
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: "";
+    drun-display-format: "{name}";
+}
+
+
+window {
+    width: 650px;
+    height: 350px;
+    background-color: @background;
+
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    y-offset: 0px;
+
+
+    border: 2px;
+    border-radius: 0px;
+    border-color: @bordercolor;
+}
+
+mainbox {
+    /* Main Layout: Top (SeZenith) and Bottom (Split List/Preview) */
+    children: [ inputbar, content-box ];
+    padding: 24px;
+    spacing: 20px;
+}
+
+/* --- SeZenith Bar --- */
+inputbar {
+    background-color: transparent;
+    border: 0px;
+    border-radius: 8px;
+    padding: 10px 16px;
+    children: [ entry ];
+    spacing: 12px;
+    color: @foreground;
+
+}
+
+entry {
+    placeholder: " SeZenith...";
+    cursor-width: 0px;
+    placeholder-color: @bordercolor;
+    text-color: @foreground;
+    vertical-align: 0.5;
+}
+
+/* --- Content Split (List vs Preview) --- */
+content-box {
+    orientation: horizontal;
+    spacing: 20px;
+    children: [ listview, icon-current-entry ];
+}
+
+/* --- Left Side: App List --- */
+listview {
+    columns: 1;
+    lines: 4;
+    fixed-height: true;
+    scrollbar: false;
+    border: 0;
+    padding: 15px 0px 0px 0px;
+}
+
+element {
+    padding: 8px 12px;
+    border-radius: 6px;
+    spacing: 5px;
+    text-color: @foregorund;
+}
+
+element-icon {
+    size: 30px;
+    enabled: false;
+}
+
+element-text {
+    vertical-align: 0.5;
+    color: @foreground;
+}
+
+element-text selected {
+    color: @selected-normal-background;
+}
+
+element selected {
+    background-color: @input-background;
+}
+
+/* --- Right Side: The Windows 11 Preview Pane --- */
+preview-box {
+    background-color: @input-background;
+    border: 0px ;
+    border-radius: 8px;
+    padding: 30px;
+    orientation: vertical;
+    children: [ icon-current-entry ];
+}
+
+icon-current-entry {
+    size: 380px;
+    horizontal-align: 0.5;
+    margin: 20px 0px 10px 0px;
+}
+
+
+/* This displays the 'Comment' or 'GenericName' from the app's .desktop file */
+message {
+    border: 0px;
+    padding: 0px;
+    horizontal-align: 0.5;
+}
+
+textbox {
+    text-color: @foreground;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}

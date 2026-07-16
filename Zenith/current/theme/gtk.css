@@ -1,0 +1,24 @@
+
+/* Core UI Colors */
+@define-color window_bg_color rgba(26,15,10,0.9);
+@define-color window_fg_color #d1d7d5;
+@define-color view_bg_color #1a0f0a;
+@define-color view_fg_color #d1d7d5;
+
+/* Selection and Accents */
+@define-color accent_bg_color #526E95;
+@define-color accent_fg_color #d1d7d5;
+@define-color accent_color #526E95;
+
+/* Header and Sidebar */
+@define-color headerbar_bg_color #1a0f0a;
+@define-color headerbar_fg_color #d1d7d5;
+@define-color sidebar_bg_color rgba(26,15,10,0.9);
+@define-color sidebar_fg_color #d1d7d5;
+@define-color sidebar_backdrop_color #1a0f0a;
+
+/* Core nm-applets colors */
+@define-color nm_bg_color rgba(26,15,10,0.9);
+@define-color nm_fg_color #d1d7d5;
+
+

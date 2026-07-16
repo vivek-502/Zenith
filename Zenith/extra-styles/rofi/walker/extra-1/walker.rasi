@@ -1,0 +1,108 @@
+
+/* Import your global theme variables */
+@import "../Zenith/current/theme/config.rasi"
+@import "../rofi/font.rasi"
+
+
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    width:                       350px;
+    /* Using your @background (95% opacity) */
+    background-color:            @background;
+    border:                      2px solid;
+    border-color:                @bordercolor;
+    cursor:                      "default";
+
+    border-radius:               8px;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/*****----- Input Bar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      20px 40px 0px 40px;
+    padding:                     10px;
+    /* Using your @input-background */
+    background-color:            @input-background;
+    border-radius:               8px;
+    text-color:                  @foreground;
+    children:                    [ "entry" ]; 
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      text;
+    placeholder:                 "SeZenith Fonts...";
+    placeholder-color:           @separatorcolor;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       10;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    border: 0;
+    
+    /* Using your spacing variable */
+    spacing:                     10px;
+    margin:                      20px 40px 30px 40px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     8px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+
+    border-radius:               5px;
+}
+
+/* Applying the selected colors and italic style */
+element selected.normal {
+    background-color:            @selected-normal-background;
+    text-color:                  @background;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+element selected.normal element-text {
+    /* Keep the italic look you liked from the screenshot */
+    font:                        "JetBrainsMono Nerd Font Italic 12";
+}

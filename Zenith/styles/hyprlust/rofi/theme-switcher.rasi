@@ -1,0 +1,86 @@
+
+/* theme-swither */
+
+
+@import "../Zenith/current/theme/config.rasi"
+@import "font.rasi"
+
+
+configuration {
+    show-icons: true;
+    disable-history: true;
+}
+
+
+
+window {
+    width: 80%;
+    height: 75%;
+    location: center;
+    anchor: center;
+    border-radius: 7px;
+    background-color: @background;
+    border: 1px;
+    border-color: @bordercolor;
+
+}
+
+mainbox {
+    padding: 0px 30px 40px 30px;
+    background-color: transparent;
+
+    children: [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:                      true;
+    text-color:                   @foregorund;
+    background-color:             transparent;
+    padding:                      12px;
+    margin:                       10px;
+    children:                     [ "entry" ];
+}
+
+entry {
+    enabled:                      true;
+    text-color:                   @foreground;
+    background-color:             transparent;
+}
+
+listview {
+    layout: vertical;
+    columns: 5;
+    spacing: 18px;
+    fixed-columns: true;
+    cycle: true;
+}
+
+element {
+    orientation: vertical;
+    border-radius: 10px;
+    background-color: @background;
+    padding: 0px 10px;
+
+}
+
+element selected {
+    border: 0px;
+    background-color: @background;
+}
+
+element-icon {
+    size: 350px;
+    border-radius: 10px;
+}
+
+element-text {
+    enabled: true;
+    expand: true;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    padding: 6px 0px 6px 0;
+    text-color: @foreground;
+    font: "Iosevka 9";
+
+    background-color: transparent;
+}

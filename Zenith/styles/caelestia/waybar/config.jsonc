@@ -1,0 +1,227 @@
+{
+    "layer": "top",
+    "position": "left",
+    "width": 8, 
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "spacing": 0,
+
+    // Left modules (Top of screen)
+    "modules-left": [
+        "custom/logo",
+        "hyprland/workspaces"
+    ],
+
+    // Center modules (Middle of screen)
+    "modules-center": [
+        "custom/desktop-logo",
+        "custom/desktop",
+    ],
+
+    // Right modules (Bottom of screen)
+    "modules-right": [
+        "custom/celender",
+        "clock",
+        "group/tools",
+        "custom/power"
+    ],
+
+
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "sort-by-number": true,
+        "show-special": false,
+        "disable-scroll": false,
+        "warp-on-scroll": false,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "persistent-workspaces": { "*": 3 },
+        "format": "{windows}{icon}",
+        "format-window-separator": "\n",
+        "format-icons": {
+          "empty": "⬤",
+          "default": "",
+          "persistent": "",
+          "visible": "",
+          "active": ""
+        },
+
+        "window-rewrite-default": "",
+        "window-rewrite": {
+          "class<brave-browser>": "󰈹",
+          "class<firefox|zen-browser|brave-browser|librewolf>": "󰈹",
+          "class<chromium|google-chrome|google-chrome-beta|google-chrome-unstable>": "",
+          "class<brave-browser|brave-browser-beta>": "",
+          "class<org.qutebrowser.qutebrowser>": "󰖟",
+          "class<kitty>": "󰄛",
+          "class<Element>": "꩜",
+          "class<spotify": "",
+          "class<Alacritty|foot|footclient|org.gnome.Console|gnome-terminal-server|org.gnome.Terminal|com.mitchellh.ghostty|wezterm-gui>": "",
+          "class<code|Code|code-url-handler|codium|VSCodium|codium-url-handler>": "󰨞",
+          "class<subl|sublime_text>": "󰅳",
+          "class<neovide|nvim-qt>": "",
+          "class<jetbrains-idea|jetbrains-idea-ce|idea>": "",
+          "class<jetbrains-pycharm|pycharm>": "",
+          "class<jetbrains-webstorm|webstorm>": "",
+          "class<jetbrains-clion|clion>": "",
+          "class<android-studio>": "󰀴",
+          "class<org.gnome.Nautilus|thunar|org.kde.dolphin|nemo>": "",
+          "class<discord|Discord|vesktop>": "󰙯",
+          "class<Slack>": "󰒱",
+          "class<TelegramDesktop|org.telegram.desktop|io.github.tdesktop_x64.TDesktop>": "",
+          "class<signal>": "󰭹",
+          "class<Element>": "󰘨",
+          "class<whatsapp-for-linux>": "󰖣",
+          "class<[Ss]potify>": "",
+          "class<vlc>": "󰕼",
+          "class<mpv|org.kde.haruna|strawberry|rhythmbox|org.gnome.Totem>": "",
+          "title<.*youtube.*>": "󰗃",
+          "title<.*netflix.*>": "󰝆",
+          "title<.*prime video.*|.*amazon.*>": "",
+          "title<.*twitch.*>": "󰕃",
+          "class<gimp-2.10|Gimp>": "",
+          "class<org.inkscape.Inkscape|Inkscape>": "󰕙",
+          "class<krita>": "",
+          "class<blender>": "󰂫",
+          "class<org.audacityteam.Audacity|Audacity>": "󰎈",
+          "class<com.obsproject.Studio>": "",
+          "class<kdenlive>": "󰕧",
+          "class<steam>": "",
+          "class<lutris>": "󰺵",
+          "class<heroic>": "󰊖",
+          "class<prismlauncher|org.prismlauncher.PrismLauncher>": "󰍳",
+          "class<libreoffice-writer>": "󰈬",
+          "class<libreoffice-calc>": "󰧷",
+          "class<libreoffice-impress>": "󰈧",
+          "class<libreoffice>": "󰈙",
+          "class<thunderbird>": "",
+          "class<org.gnome.Evince|evince>": "󰈦",
+          "class<org.gnome.Settings|io.missioncenter.MissionCenter>": "",
+          "class<nwg-look>": "",
+          "class<org.gnome.SystemMonitor>": "󰄨",
+          "class<pavucontrol>": "󰕾",
+          "class<org.gnome.Calculator>": "󰃬",
+          "class<org.gnome.Weather>": "",
+          "class<org.kde.kate|org.gnome.TextEditor>": "󰈔",
+          "title<.*reddit.*>": "",
+          "title<.*github.*>": "",
+          "class<retroZenith>": "󰺵",
+          "class<org.gnome.Lollypop>": "󰎆",
+        },
+    },
+
+    "custom/desktop-logo": {
+        "format": "🖳",
+        "tooltip": false
+    },
+
+    "custom/desktop": {
+        "format": "Desktop",
+        "rotate": 270
+    },
+
+    "custom/keybinds": {
+        "format": "",
+        "on-click": "sh -c ~/.config/Zenith/scripts/rofi_menu/keybindings.sh",
+        "tooltip": false
+
+    },
+
+    "custom/celender": {
+        "format": "",
+        "on-click": "sh -c ~/.config/Zenith/scripts/rofi_menu/keybindings.sh",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "clock": {
+        // Matches the vertical stack in your image: 05\n11 — 17\n09
+        "format": "{:%H\n%M}", 
+        "tooltip-format": "{:%a, %h %d, %Y}"
+    },
+
+    "custom/logo": {
+        "format": "",
+        "on-click": "~/.config/Zenith/scripts/rofi_menu/walker/walker.sh",
+        "tooltip-format": "Arch linux BTW"
+    },
+
+    // 2. Define the group container
+    "group/tools": {
+        "orientation": "vertical", // Stacks them vertically
+        "modules": [
+            "group/tray-expander",
+            "pulseaudio",
+            "battery"
+        ]
+    },
+
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "kitty --class floating-terminal -e wiremix --tab output"
+    },
+
+
+   "network": {
+        "interval": 3,
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀 LAN",
+        "format-disconnected": "󰤮  No Net",
+        "format-icons": [
+          "󰤯", // 0%
+          "󰤟", // 25%
+          "󰤢", // 50%
+          "󰤥", // 75%
+          "󰤨"  // 100%
+        ],
+        "tooltip-format-wifi": "󰤨  {essid} ({frequency} GHz)\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "󰈀  {ifname}\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "kitty --class floating-terminal -e impala" 
+    },
+    
+
+    "battery": {
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "bash ~/.config/rofi/scripts/power-profile.sh",
+        "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+        "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%"
+    },
+
+    "custom/power": {
+        "format": " ",
+        "on-click": "~/.config/Zenith/scripts/rofi_menu/powermenu.sh",
+        "tooltip": false
+    },
+
+    "group/tray-expander": {
+        "orientation": "inherit",
+        "drawer": {
+          "transition-duration": 600,
+          "children-class": "tray-group-item"
+        },
+        "modules": ["custom/expand-icon", "tray"]
+    },
+
+    "custom/expand-icon": {
+        "format": "▲",
+        "tooltip": false,
+        "on-scroll-up": "",
+        "on-scroll-down": "",
+        "on-scroll-left": "",
+        "on-scroll-right": ""
+    },
+
+    "tray": {
+      "icon-size": 16,
+      "spacing": 10,
+      "show-passive-items": true // This forces items to show even if they aren't "active"
+    }
+
+}

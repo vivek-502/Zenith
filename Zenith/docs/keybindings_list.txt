@@ -1,0 +1,74 @@
+-----------------   General Applications ----------------
+----------------------------------------------------------
+SUPER + Enter | Open Terminal (Kitty)
+SUPER + Shift + Enter | Quick Terminal (Kitty --class quick-terminal)
+SUPER + Shift + E | Open File Manager (Nautilus)
+SUPER + Shift + B | Open Browser (firefox)
+SUPER + Space | App Launcher (Rofi)
+SUPER + Alt + Space | Walker Menu
+SUPER + I | Install Menu
+SUPER + Shift + N | Network Manager (nmtui)
+SUPER + X | Notification Panel (swaync)
+SUPER + M | Mute Window Script
+
+------------------   Window Management ------------------
+----------------------------------------------------------
+SUPER + W | Close Focused Window
+SUPER + Q | Force Kill Window
+SUPER + F | Toggle Fullscreen
+SUPER + T | Toggle Floating Mode
+SUPER + H | Pseudo Tiling (Dwindle)
+SUPER + J | Toggle Split (Dwindle)
+SUPER + G | Group Windows
+SUPER + Tab | Cycle Grouped Windows (Next)
+SUPER + Shift + Tab | Cycle Grouped Windows (Prev)
+SUPER + D | Dock Picker
+SUPER + Shift + D | Send to Dock
+
+-------------------   Focus & Movement ------------------
+----------------------------------------------------------
+SUPER + Arrow Keys | Move Focus
+SUPER + Shift + Arrow Keys | Move Window
+SUPER + Ctrl + Arrow Keys | Resize Window
+SUPER + Left Click | Move Window (Drag)
+SUPER + Right Click | Resize Window (Drag)
+
+----------------------   Workspaces ---------------------
+----------------------------------------------------------
+SUPER + 1–0 | Switch Workspace (1–10)
+SUPER + Shift + 1–0 | Move Window to Workspace
+SUPER + S | Toggle Scratchpad (Special Workspace)
+SUPER + Shift + S | Move Window to Scratchpad
+SUPER + Scroll Up/Down | Cycle Workspaces
+SUPER + L | Workspace Script
+
+-------------------   Media & Hardware ------------------
+----------------------------------------------------------
+Volume Up/Down | Adjust Volume
+Mute | Toggle Audio Mute
+Mic Mute | Toggle Microphone Mute
+Brightness Up/Down | Adjust Brightness
+Media Next/Prev | Control Media Playback
+Play/Pause | Toggle Playback
+SUPER + Shift + A | Sound Control (Wiremix)
+
+------------------  System & Utilities ------------------
+----------------------------------------------------------
+SUPER + Ctrl + L | Lock Screen
+SUPER + Escape | Power Menu
+SUPER + P | Power Profile Menu
+SUPER + Alt + W | Toggle Waybar
+Print Screen | Screenshot (Region)
+SUPER + V | Clipboard History
+SUPER + C | Color Picker
+SUPER + K | Keybinds Help Menu
+SUPER + O | OCR4Linux
+
+------------------ 🎨 Theming & Styling ------------------
+----------------------------------------------------------
+SUPER + Alt + Ctrl + Space | Style Switcher
+SUPER + Shift + Ctrl + Space | Theme by Wallpaper
+SUPER + Shift + Space | Background Selector
+CTRL + Shift + Space | Live Wallpaper
+SUPER + Shift + W | Toggle Waybar Position
+

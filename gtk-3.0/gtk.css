@@ -1,0 +1,190 @@
+@import "../Zenith/current/theme/gtk.css";
+
+/* =========================================
+   1. GLOBAL & BASE OVERRIDES
+   ========================================= */
+window,
+.background,
+.view {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+.view:selected {
+    background-color: @accent_bg_color;
+    color: @window_bg_color;
+}
+
+/* Global entry fields (SeZenith, Path, etc.) */
+entry {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+    border: 1px solid @accent_bg_color;
+}
+
+/* =========================================
+   2. FILE PICKER PORTAL & DIALOGS
+   (Targets the "xdg-desktop-portal-gtk" window)
+   ========================================= */
+
+/* The top bar (Headerbar) */
+headerbar {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+/* Fixes for text and buttons inside the top bar */
+headerbar label,
+headerbar button,
+headerbar entry {
+    color: @window_fg_color;
+}
+
+/* Side pane container */
+placessidebar,
+placessidebar .navigation-sidebar {
+    background-color: @sidebar_bg_color;
+    color: @sidebar_fg_color;
+}
+
+/* Side pane text labels (Crucial for readability) */
+placessidebar label {
+    color: @sidebar_fg_color;
+}
+
+/* Selected item in the side pane */
+placessidebar row:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/* The file list header buttons (Name, Size, Modified) */
+columnview header button {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+    border: none;
+}
+
+/* The bottom bar (Actionbar) where file-type dropdown sits */
+actionbar > revealer > box {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+    border-top: 1px solid @accent_bg_color;
+}
+
+actionbar label,
+actionbar button {
+    color: @window_fg_color;
+}
+
+/* Specific targeting for the FileChooser dialog window */
+window.dialog.filechooser {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+/* =========================================
+   3. THUNAR SPECIFIC OVERRIDES
+   ========================================= */
+.thunar .sidebar,
+.thunar .sidebar .view,
+.thunar .sidebar row,
+.thunar .sidebar scrolledwindow {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+.thunar .sidebar .view:selected,
+.thunar .sidebar row:selected {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+.thunar paned separator {
+    background-color: @window_bg_color;
+    border: none;
+}
+
+.thunar toolbar,
+.thunar .toolbar,
+.thunar .seZenith-bar {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+.thunar toolbar button,
+.thunar .path-bar-box button {
+    background-image: none;
+    background-color: transparent;
+    color: @window_fg_color;
+}
+
+.thunar toolbar button:checked,
+.thunar .path-bar-box button:checked {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+/* =========================================
+   4. SYSTEM & NM-APPLET MENUS (GTK3)
+   ========================================= */
+/* Base menu */
+menu,
+.menu,
+window.popup,
+.popup {
+    background-color: @nm_bg_color;
+    color: @window_fg_color;
+    border: 0px solid @accent_bg_color;
+}
+
+/* Normal items (DO NOT dim these) */
+menuitem,
+.menuitem {
+    color: shade(@window_fg_color, 1);
+    background-color: transparent;
+    padding: 4px 8px;
+}
+
+/* Hover / selected */
+menuitem:hover,
+menuitem:selected,
+menuitem:active {
+    background-color: @accent_bg_color;
+    color: shade(@window_fg_color, 0.25);
+}
+
+/* ✅ Only dim non-interactive items */
+menuitem:insensitive,
+menuitem:disabled,
+menuitem label:disabled {
+    color: shade(@window_fg_color, 0.35);
+}
+
+/* Optional: section labels (like "Available networks") */
+menuitem separator + menuitem label {
+    color: shade(@window_fg_color, 1);
+    margin: 4px 0;
+}
+
+/* =========================================
+   5. LIBREOFFICE & MENUBAR FIXES
+   ========================================= */
+menubar,
+.menubar {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+menubar menuitem,
+.menubar menuitem {
+    color: @window_fg_color;
+}
+
+/* Ensure the application's main background container stays dark */
+#GtkMainWindow,
+.main-window-container {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+@import 'colors.css';

@@ -1,0 +1,111 @@
+
+/* Import your global theme variables */
+@import "../Zenith/current/theme/config.rasi"
+@import "font.rasi"
+
+
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+    icon-theme:        "Yaru";
+    drun-display-format:        "{name}";
+
+    
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    width:                       300px;
+    /* Using your @background (95% opacity) */
+    background-color:            @background;
+    border:                      2px solid;
+    border-color:                @bordercolor;
+    cursor:                      "default";
+
+    border-radius:               0px;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/*****----- Input Bar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      20px 15px 0px 15px;
+    padding:                     10px;
+    /* Using your @input-background */
+    background-color:            transparent;
+    border-radius:               8px;
+    text-color:                  @foreground;
+    children:                    [ "entry" ]; 
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      none;
+    cursor-width: 0px;
+    placeholder:                 " SeZenith...";
+    placeholder-color:           inherit;
+}
+
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    border:                       0px;
+    
+    /* Using your spacing variable */
+    spacing:                     10px;
+    margin:                      20px 15px 30px 15px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px; /* Space between icon and text */
+    padding:                     8px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+    border-radius:               5px;
+}
+
+/* Add this to display the icon */
+element-icon {
+    size:            28px;
+    cursor:          inherit;
+    background-color: transparent;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+element selected.normal {
+    background-color: @input-background;
+    text-color: @selected-normal-background;
+}

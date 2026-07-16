@@ -1,0 +1,251 @@
+@import '../Zenith/current/theme/swaync.css';
+@import '../swaync/font.css';
+
+/* ---------------- Global ---------------- */
+* {
+  all: unset;
+  color: @text;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: 150ms ease;
+}
+
+/* ---------------- Control Center ---------------- */
+.control-center {
+  background: @background;
+  border-radius: 14px;
+  margin: 6px;
+  padding: 8px;
+}
+
+/* ---------------- Buttons Grid (BOTTOM, CENTERED) ---------------- */
+.widget-buttons-grid {
+  background: @background-alt;
+  border-radius: 12px;
+  padding: 6px;
+  
+  padding-left: 45px;
+  margin-top: 2px;
+  margin-bottom: 25px;
+}
+
+
+.widget-buttons-grid button {
+  background: @hover;
+  border-radius: 12px;
+  padding: 8px;
+  margin: 6px;
+  min-width: 12px;
+  min-height: 12px;
+}
+
+.widget-buttons-grid button:hover {
+  background: @selected;
+}
+
+
+.widget-buttons-grid button.toggle:checked {
+  background-color: @text-alt;
+  color: @background;
+}
+
+
+.widget-buttons-grid button > label {
+  font-size: 1rem;
+  color: @text;
+}
+
+/* ---------------- Volume ---------------- */
+.widget-volume {
+  background: @background-alt;
+  border-radius: 12px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+}
+
+/* volume icon */
+.widget-volume label:first-child::before {
+  content: "󰕾 ";
+  font-size: 1.1rem;
+}
+
+.widget-volume trough {
+  background: @hover;
+  border-radius: 10px;
+  margin-left: 6px;
+}
+
+.widget-volume highlight {
+  background: @text;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.widget-volume slider {
+  background: @text;
+  border-radius: 50%;
+}
+
+
+.control-center > box > *:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Title Widget ──────────────────────────────────────────────── */
+.widget-title {
+  background: transparent;
+  border: none;
+  padding: 4px 6px 12px 6px;
+  margin-bottom: 8px;
+}
+
+.widget-title label {
+  font-weight: 500;
+  color: @text-alt;
+  margin-left: 4px;
+}
+
+.widget-title button {
+  font-size: 16px;
+  color: @text;
+  background-color: @selected;
+  border-radius: 10px;
+  padding: 7px 16px;
+}
+
+.widget-title button:hover,
+.widget-title button:active {
+  background-color: @hover;
+}
+
+/* ── 4. MPRIS Widget ───────────────────────────────────────────── */
+.widget-mpris {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.widget-mpris .widget-mpris-player {
+  background-color: @background-alt;
+  border-radius: 12px;
+  border: 1px solid @selected;
+  padding: 16px;
+}
+
+.widget-mpris .widget-mpris-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: @text;
+}
+
+.widget-mpris .widget-mpris-subtitle {
+  font-size: 16px;
+  color: @text-alt;
+}
+
+.widget-mpris .widget-mpris-player button {
+  background: transparent;
+  border-radius: 50%;
+  padding: 7px;
+  color: @text-alt;
+}
+
+.widget-mpris .widget-mpris-player button:hover {
+  background-color: @hover;
+  color: @text;
+}
+
+/* ---------------- MPRIS ---------------- */
+/*.widget-mpris {
+  background: @background-alt;
+  border-radius: 12px;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+}
+
+.widget-mpris-player {
+  padding: 6px 20px;
+}
+
+.widget-mpris-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.widget-mpris-subtitle {
+  font-size: 0.75rem;
+  color: @text-alt;
+}
+
+.widget-mpris-album-art {
+  border-radius: 10px;
+  margin: 4px;
+}
+
+.widget-mpris-player button {
+  padding: 4px;
+  margin: 0 2px;
+}
+
+.widget-mpris-player button:hover {
+  background: @hover;
+  border-radius: 6px;
+}*/
+
+/* ---------------- Notifications ---------------- */
+.notification-group {
+  margin-top: 6px;
+  max-height: 500px;
+}
+
+.notification-background {
+  background: @background-alt;
+  border-radius: 14px;
+  margin: 6px 0;
+}
+
+.notification {
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid alpha(@text-alt, .15);
+}
+
+.notification .summary {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.notification .body {
+  font-size: 0.8rem;
+  color: @text-alt;
+}
+
+
+/* ---------- Battery notifications ---------- */
+
+.notification.critical {
+  background: #3b0a0a;
+  border: 2px solid #ff5555;
+  color: #ffdede;
+}
+
+
+/* Progress bar */
+.notification progress highlight {
+  background: @text;
+}
+
+/* Hide close buttons */
+.close-button,
+.notification-group-close-button {
+  opacity: 0;
+}
+
+/* Placeholder */
+.control-center-list-placeholder {
+  color: @text-alt;
+}
+
+.blank-window {
+  background: transparent;
+}

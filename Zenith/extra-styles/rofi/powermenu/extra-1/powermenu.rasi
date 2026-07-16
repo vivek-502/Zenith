@@ -1,0 +1,86 @@
+
+@import "/home/golu/.config/Zenith/current/theme/config.rasi"
+
+configuration {
+    show-icons: true;
+    font: "Iosevka 11";
+    disable-history: true;
+    
+}
+
+
+window {
+    width: 40%;
+    height: 18%;
+    location: center;
+    anchor: center;
+    border-radius: 30px;
+    background-color: @background;
+    border: 1px;
+    border-color: @bordercolor;
+
+    margin: 0px 0px 0px 0px;
+
+}
+
+mainbox {
+    padding: 12px;
+
+    children: [ listview ];
+}
+
+listview {
+    layout: vertical;
+    columns: 5;
+    spacing: 8px;
+    fixed-columns: true;
+    cycle: true;
+}
+
+element {
+    orientation: vertical;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+
+}
+
+element selected {
+    border: 0px;
+}
+
+element-icon {
+    size: 10px;
+    border-radius: 10px;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    padding: 0px 0 0 0;
+    text-color: @foreground;
+    font: "Iosevka 32";
+}
+
+element-text selected {
+    text-color: @selected-normal-background;
+}
+
+
+
+/* --- Hide search bar visually but keep typing --- */
+inputbar {
+    enabled: false;
+}
+
+prompt {
+    enabled: false;
+}
+
+entry {
+    enabled: false;
+}
+
+mesg {
+    enabled: false;
+}

@@ -1,0 +1,146 @@
+/**
+ * ROFI Color theme 
+ */
+
+@import "../Zenith/current/theme/config.rasi"
+@import "font.rasi"
+
+configuration {
+    show-icons: true;
+    modi: "drun,run,filebrowser";
+
+    display-drun:        "󰀻";
+    display-filebrowser: "󰉋"; 
+    display-run:         "󰆍";
+
+    /*display-window:      "󰖯";*/
+    
+    drun-display-format: "{name}";
+}
+
+
+
+/* ---------- WINDOW ---------- */
+window {
+    background-color: @background;
+    border: 0;
+    border-radius: 7px;
+    padding: 0;
+    width: 35%;
+    height: 70%;
+    padding: 5px;
+}
+
+/* ---------- LAYOUT ---------- */
+mainbox {
+    orientation: vertical;
+    spacing: 18px;
+    children: [  inputbar, listview ];
+
+}
+
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    expand: false;
+    spacing:                     10px;
+    padding:                     30px 30px 60px 30px;
+    background-color:            transparent;
+    background-image:            url("~/.config/Zenith/current/rofi-horizontal.jpeg", width);
+    text-color:                  @foreground;
+    orientation:                 horizontal;
+    children:                    [ "entry", "mode-switcher" ];
+}
+
+
+entry {
+    enabled:                     true;
+    expand:                      true;
+    padding:                     10px 15px;
+    border-radius:               0px;
+    background-color:            @background;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "SeZenith";
+    placeholder-color:           inherit;
+
+    border-radius: 7px;
+}
+
+/* ---------- MODE SWITCHER ---------- */
+mode-switcher {
+    enabled: true;
+
+    spacing: 10px;
+
+    padding: 0px 0px 0px 0px; /* LEFT bias */
+    background-color: transparent;
+    margin: 0px 0px 0px 10px;
+}
+
+button {
+    expand: true;
+
+    horizontal-align: 0.5;   /* LEFT */
+    vertical-align: 0.5;
+
+    min-width: 20px;
+    min-height: 20px;
+
+    padding: 10px 15px;
+    margin:  0px;
+
+    border-radius: 999px;
+    background-color: @background;
+    text-color: @foreground;
+}
+
+button selected {
+    background-color: @selected-normal-background;
+    text-color: @foreground;
+}
+
+/* ---------- LIST ---------- */
+listview {
+    fixed-height: 0;
+    border: 0;
+    padding: 15px;
+    spacing: 6px;
+    scrollbar: false;
+    lines: 6;
+    columns: 1;
+}
+
+
+/* ---------- ELEMENT ---------- */
+element {
+    border: 0;
+    padding: 6px;
+    border-radius: 8;
+}
+
+element-icon {
+    size: 30px;
+    margin: 0px 6px 0px 0px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+/* ---------- STATES ---------- */
+element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @background;
+}
+
+/* ---------- CLEANUP ---------- */
+scrollbar { width: 0px; }

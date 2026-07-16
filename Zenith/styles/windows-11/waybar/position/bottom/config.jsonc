@@ -1,0 +1,89 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 48,
+    "modules-left": [], 
+    "modules-center": [
+        "custom/start",
+        "custom/search",
+        "custom/explorer",
+        "custom/browser",
+        "custom/store",
+        "wlr/taskbar"
+    ],
+    "modules-right": ["group/tray-expander", "pulseaudio", "network", "battery", "clock"],
+
+    "custom/start": { "format": " ", "on-click": "sh -c '~/.config/Zenith/scripts/rofi_menu/walker/walker.sh'" },
+    "custom/search": { "format": "", "on-click": "rofi -show drun" },
+    "custom/taskview": { "format": " ", "on-click": "hyprctl dispatch toggleoverview" },
+    "custom/widgets": { "format": " " },
+    "custom/explorer": { "format": " ", "on-click": "nautilus" },
+    "custom/browser": { "format": " ", "on-click": "brave" },
+    "custom/store": { "format": " ", "on-click": "sh -c '~/.config/Zenith/scripts/rofi_menu/walker/install.sh'" },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "on-click": "activate",
+        "ignore-list": ["nautilus", "firefox", "pamac-manager"]
+    },
+
+    "clock": { "format": "{:%I:%M %p\n%m/%d/%Y}" },
+
+   "network": {
+        "interval": 3,
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀 LAN",
+        "format-disconnected": "󰤮  No Net",
+        "format-icons": [
+          "󰤯", // 0%
+          "󰤟", // 25%
+          "󰤢", // 50%
+          "󰤥", // 75%
+          "󰤨"  // 100%
+        ],
+        "tooltip-format-wifi": "󰤨  {essid} ({frequency} GHz)\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "󰈀  {ifname}\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "kitty --class floating-terminal -e impala" 
+    },
+    
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "kitty --class floating-terminal -e wiremix --tab output"
+    },
+
+    "battery": {
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "bash ~/.config/rofi/scripts/power-profile.sh",
+        "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+        "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%"
+    },
+
+    "group/tray-expander": {
+      "orientation": "inherit",
+      "drawer": {
+        "transition-duration": 600,
+        "children-class": "tray-group-item"
+      },
+      "modules": ["custom/expand-icon", "tray"]
+    },
+
+    "custom/expand-icon": {
+      "format": "",
+      "tooltip": false,
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "on-scroll-left": "",
+      "on-scroll-right": ""
+    },
+  
+    "tray": {
+     "icon-size": 18,
+     "spacing": 12
+    }
+}

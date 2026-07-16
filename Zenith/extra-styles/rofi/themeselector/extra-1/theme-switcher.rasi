@@ -1,0 +1,84 @@
+/* theme-switcher */
+
+@import "/home/golu/.config/Zenith/current/theme/config.rasi"
+
+@import "/home/golu/.config/rofi/font.rasi"
+
+/* ---------- WINDOW ---------- */
+window {
+    width: 600px;
+    height: 385px;
+    location: center;
+    anchor: center;
+    border: 1px;
+    border-color: @bordercolor;
+    border-radius: 7px;
+    background-color: transparent;
+
+    children: [ mainbox ];
+}
+
+/* ---------- MAIN ---------- */
+mainbox {
+    padding: 0px; 
+    background-color: transparent;
+    children: [ listview ];
+}
+
+/* ---------- LISTVIEW ---------- */
+listview {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    columns: 1;
+    lines: 1;
+    spacing: 0px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+}
+
+/* ---------- ELEMENT ---------- */
+element {
+    orientation: vertical;
+    padding: 0px;
+    margin: 0px;
+    spacing: 0px;
+    border-radius: 7px; 
+    background-color: @background;
+}
+
+/* ---------- ICON ---------- */
+element-icon {
+    size: 340px; 
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    expand: true;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* ---------- TEXT ---------- */
+element-text {
+    expand: false; 
+    padding: 12px 0px;
+    horizontal-align: 0.5;
+    background-color: @background; 
+    text-color: @foreground;
+}
+
+element-text selected {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+/* ---------- HIDE SEARCH BAR ---------- */
+/* ---------- HIDE SEARCH BAR ---------- */
+inputbar {
+    enabled: true;               // Ensure input bar is enabled
+    border: 0px;                 // No visible border
+    padding: 0px;                // Remove padding
+    background-color: transparent; // Match background to make it invisible
+    text-color: transparent;      // Set text color to transparent
+    height: 1px;                 // Set a minimal height to maintain functionality
+}

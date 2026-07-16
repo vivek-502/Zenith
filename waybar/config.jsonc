@@ -1,0 +1,77 @@
+{
+    "layer": "top",
+    "position": "left",
+    "width": 8, 
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "spacing": 0,
+
+    // Left modules (Top of screen)
+    "modules-left": [
+        "custom/logo",
+        "hyprland/workspaces"
+    ],
+
+    // Center modules (Middle of screen)
+    "modules-center": [
+        "clock"
+    ],
+
+    // Right modules (Bottom of screen)
+    "modules-right": [
+        "tray",
+        "pulseaudio",      // The moon/audio icon
+        "battery"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "sort-by-number": true
+    },
+
+    "clock": {
+        // Matches the vertical stack in your image: 05\n11 — 17\n09
+        "format": "{:%I\n%M\n──\n%d\n%m}", 
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "custom/logo": {
+        "format": "",
+        "on-click": "~/.config/rofi/scripts/walker.sh",
+        "on-click-right": "kitty --class floating-terminal --hold neofetch",
+        "tooltip-format": "Arch linux BTW"
+    },
+    
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "kitty --class floating-terminal -e wiremix --tab output"
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "tooltip-format": "{essid}",
+        "on-click": "kitty --class floating-terminal -e impala"
+    },
+
+    "battery": {
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "bash ~/.config/rofi/scripts/power-profile.sh",
+        "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+        "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 9,
+        "show-passive-items": true // This forces items to show even if they aren't "active"
+    }
+}

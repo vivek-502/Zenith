@@ -1,0 +1,90 @@
+@import "../Zenith/current/theme/gtk.css";
+
+/* Nautilus Specific Adjustments */
+.nautilus-window, 
+window.main-window {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+/* Sidebar styling */
+.navigation-sidebar {
+    background-color: @sidebar_bg_color;
+    color: @sidebar_fg_color;
+}
+
+/* Tab Bar Styling (Matches your paste) */
+tabbar tab {
+    background-color: #0D1316;
+    color: #85807b; /* Inactive tab foreground */
+}
+
+tabbar tab:checked {
+    background-color: #886C53;
+    color: #bfb8b0; /* Active tab foreground */
+}
+
+/* Selection highlight in file list */
+.view:selected, 
+.view:selected:focus {
+    background-color: #886C53;
+    color: #bfb8b0;
+}
+
+/* Fix for the path bar/seZenith bar */
+entry {
+    background-color: #0D1316;
+    color: #bfb8b0;
+    border: 1px solid #886C53;
+}
+
+/* Sidebar/Side Pane in the File Picker portal */
+placessidebar,
+placessidebar .navigation-sidebar {
+    background-color: @sidebar_bg_color;
+    color: @sidebar_fg_color;
+}
+
+/* Main background area where files are listed */
+filechooser .view,
+filechooser .view:hover {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+/* The path bar and seZenith entries */
+filechooser entry {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+    /* Using a standard variable if available, otherwise it falls back */
+    border: 1px solid @theme_selected_bg_color; 
+}
+
+/* Row selection inside the portal sidebar */
+placessidebar row:selected {
+    background-color: @theme_selected_bg_color;
+    color: @window_bg_color;
+}
+
+
+/* =========================================
+   5. LIBREOFFICE & MENUBAR FIXES
+   ========================================= */
+menubar,
+.menubar {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+menubar menuitem,
+.menubar menuitem {
+    color: @window_fg_color;
+}
+
+/* Ensure the application's main background container stays dark */
+#GtkMainWindow,
+.main-window-container {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+@import 'colors.css';

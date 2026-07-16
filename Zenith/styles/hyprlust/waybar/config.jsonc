@@ -1,0 +1,164 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "height": 26,
+  "width": 1000,
+  "margin-top": 3,
+  "modules-left": ["custom/logo",
+   "hyprland/window"
+  ],
+
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "tray",
+    "group/tools",
+    "clock",
+    "custom/power"
+  ],
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{name}"
+
+  },
+
+  "custom/logo": {
+    "format": "",
+    "on-click": "~/.config/Zenith/scripts/rofi_menu/walker/walker.sh",
+    "tooltip-format": "Arch linux BTW"
+  },
+
+
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:L%d %B W%V %Y}",
+    "tooltip": false,
+    "on-click-right": "omZenithy-launch-floating-terminal-with-presentation omZenithy-tz-select"
+  },
+
+// --- CENTER MODULES ---
+
+  "hyprland/window": {
+    "format": "{title}",
+    "rewrite": {
+      "": "  Empty",
+      "^Alacritty$": " $0",
+      ".*YouTube.*": " $0"
+    },
+    "empty": "empty",
+    "icon": true,
+    "icon-size": 18
+
+  },   
+
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "format-paused": "▶ {title}",
+    "format-stopped": "",
+    "max-length": 30,
+
+    "player-icons": {
+      "mpv": "",
+      "vlc": "",
+      "firefox": "󰈹",
+      "chromium": "󰊯",
+      "default": ""
+    },
+
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+
+      // 2. Define the group container
+    "group/tools": {
+        "orientation": "horizontal", // Stacks them vertically
+        "modules": [
+            "pulseaudio",
+            "backlight",
+            "battery"
+        ]
+    },
+
+
+  "network": {
+    "interval": 3,
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀 LAN",
+    "format-disconnected": "󰤮  No Net",
+    "format-icons": [
+      "󰤯", // 0%
+      "󰤟", // 25%
+      "󰤢", // 50%
+      "󰤥", // 75%
+      "󰤨"  // 100%
+    ],
+    "tooltip-format-wifi": "󰤨  {essid} ({frequency} GHz)\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "󰈀  {ifname}\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "kitty --class floating-terminal -e impala" 
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}% ",
+    "format-discharging": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}%",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "on-click": "bash $HOME/.config/rofi/scripts/power-profile.sh &",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "on-click": "kitty --class floating-terminal -e wiremix --tab output",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "default": ["", "", ""]
+
+    }
+  },
+
+
+
+  // --- Notification Module (SwayNC) ---
+  "custom/power": {
+    "tooltip": false,
+    "format": "",
+    "on-click": "~/.config/Zenith/scripts/rofi_menu/powermenu.sh"
+
+  },
+
+
+    "backlight": {
+        "device": "intel_backlight",
+        "rotate": 0,
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "min-length": 6
+    },
+
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+    "show-passive-items": true // This forces items to show even if they aren't "active"
+  }
+}

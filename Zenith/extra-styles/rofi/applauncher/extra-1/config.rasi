@@ -1,0 +1,116 @@
+
+/* Import your global theme variables */
+@import "/home/golu/.config/Zenith/current/theme/config.rasi"
+@import "/home/golu/.config/rofi/font.rasi"
+
+
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 true;
+    icon-theme:        "Yaru";
+
+    
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    width:                       400px;
+    /* Using your @background (95% opacity) */
+    background-color:            @background;
+    border:                      2px solid;
+    border-color:                @bordercolor;
+    cursor:                      "default";
+
+    border-radius:               8px;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/*****----- Input Bar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      20px 40px 0px 40px;
+    padding:                     10px;
+    /* Using your @input-background */
+    background-color:            @input-background;
+    border-radius:               8px;
+    text-color:                  @foreground;
+    children:                    [ "entry" ]; 
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      text;
+    placeholder:                 "SeZenith...";
+    placeholder-color:           @separatorcolor;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    border:                       0px;
+    
+    /* Using your spacing variable */
+    spacing:                     10px;
+    margin:                      20px 40px 30px 40px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px; /* Space between icon and text */
+    padding:                     8px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+    border-radius:               5px;
+}
+
+/* Add this to display the icon */
+element-icon {
+    size:            24px;
+    cursor:          inherit;
+    background-color: transparent;
+    /* This makes the colored icons look very faded/monochrome against dark backgrounds */
+    alpha:           0.4;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+}
+
+element-text selected {
+    text-color:                  @background;
+}
+
+element selected.normal element-text {
+    /* Keep the italic look you liked from the screenshot */
+    font:                        "JetBrainsMono Nerd Font Italic 12";
+
+}
