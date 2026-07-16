@@ -10,11 +10,11 @@ Zenith isn't just a collection of config files; it's a **Desktop Orchestration E
 
 | Style 1 | Style 2 | Style 3 |
 | :---: | :---: | :---: |
-| ![Style 1](assets/screenshot1.png) | ![Style 2](assets/screenshot2.png) | ![Style 3](assets/screenshot3.png) |
+| ![Style 1](assets/1.png) | ![Style 2](assets/2.png) | ![Style 3](assets/3.png) |
 
 | Tweak Menu | Workspace View |
 | :---: | :---: |
-| ![Tweak Menu](assets/screenshot4.png) | ![Workspace View](assets/screenshot5.png) |
+| ![Tweak Menu](assets/4.png) | ![Workspace View](assets/5.png) |
 
 ---
 
