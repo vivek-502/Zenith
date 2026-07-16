@@ -55,8 +55,8 @@ NETWORK_PKGS=(networkmanager wpa_supplicant wireless_tools network-manager-apple
 BLUETOOTH_PKGS=(bluez bluez-utils blueman bluez-obex)
 AUDIO_PKGS=(pipewire pipewire-pulse pipewire-alsa)
 DESKTOP_ESSENTIALS=(polkit-gnome brightnessctl power-profiles-daemon)
-HYPR_DEPS=(firefox unzip grim slurp kitty nautilus waybar rofi-wayland python-pywal imagemagick swaync awww hypridle hyprlock hyprpicker hyprshot cliphist mpv jq viewnior gnome-text-editor)
-FONTS=(noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-dejavu ttf-liberation ttf-roboto ttf-jetbrains-mono-nerd)
+HYPR_DEPS=(firefox yt-dlp unzip grim slurp kitty nautilus waybar rofi-wayland python-pywal imagemagick swaync awww hypridle hyprlock hyprpicker hyprshot cliphist mpv jq viewnior gnome-text-editor)
+FONTS=(noto-fonts noto-fonts-emoji ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd)
 AUR_PKGS=(ani-cli wiremix ocr4linux-git)
 
 # --- Installation ---
