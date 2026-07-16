@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "right",
-    "width": 8, 
+    "width": 8,
     "margin-top": 0,
     "margin-bottom": 0,
     "margin-left": 0,
@@ -34,7 +34,7 @@
 
     "clock": {
         // Matches the vertical stack in your image: 05\n11 — 17\n09
-        "format": "{:%I\n%M\n──\n%d\n%m}", 
+        "format": "{:%I\n%M\n──\n%d\n%m}",
         "tooltip-format": "<tt>{calendar}</tt>"
     },
 
@@ -44,7 +44,7 @@
         "on-click-right": "kitty --class floating-terminal --hold neofetch",
         "tooltip-format": "Arch linux BTW"
     },
-    
+
     "pulseaudio": {
         "format": "{icon}",
         "format-icons": {

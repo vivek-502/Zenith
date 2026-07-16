@@ -14,7 +14,7 @@ SELECTED_PKGS=$(echo "$PACKAGES" | rofi -dmenu -i -multi-select \
     -theme-str 'inputbar { children: [ "entry" ]; }' \
     -theme-str 'window { width: 35%; }' \
     -theme-str 'listview { lines: 7; }' \
-    -theme-str 'entry { placeholder: "SeZenith Packages to Remove..."; }' \
+    -theme-str 'entry { placeholder: "Search Packages to Remove..."; }' \
     -p "Uninstall")
 
 # 4. Exit if nothing selected

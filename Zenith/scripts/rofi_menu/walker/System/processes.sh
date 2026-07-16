@@ -14,7 +14,7 @@ SEL_PROC=$(echo -e "$PROC_LIST" | rofi -dmenu -i \
     -theme ~/.config/rofi/walker.rasi \
     -theme-str 'window { width: 500px; }' \
     -theme-str 'listview { lines: 10; }' \
-    -theme-str 'entry { placeholder: "SeZenith process to kill..."; }' \
+    -theme-str 'entry { placeholder: "Search process to kill..."; }' \
     -p "Kill")
 
 # 4. Extract the process name

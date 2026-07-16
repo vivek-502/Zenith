@@ -39,7 +39,7 @@ mainbox {
 }
 
 
-/* --- Top SeZenith Bar --- */
+/* --- Top Search Bar --- */
 inputbar {
     background-color: @input-background;
     border-radius: 20px;
@@ -119,5 +119,5 @@ element.selected.normal {
 }
 
 
-/*****----- Hide SeZenith Bar -----*****/
+/*****----- Hide Search Bar -----*****/
 inputbar { enabled: true; }

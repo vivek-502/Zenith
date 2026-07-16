@@ -18,7 +18,7 @@ SELECTED_PKGS=$(echo "$UNINSTALLED_PACKAGES" | rofi -dmenu -i -multi-select \
     -theme-str 'inputbar { children: [ "entry" ]; }' \
     -theme-str 'window { width: 35%; }' \
     -theme-str 'listview { lines: 7; }' \
-    -theme-str 'entry { placeholder: "SeZenith AUR/Repo Packages..."; }' \
+    -theme-str 'entry { placeholder: "Search AUR/Repo Packages..."; }' \
     -p "Install")
 
 # 5. Exit if nothing selected

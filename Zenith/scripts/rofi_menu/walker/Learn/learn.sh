@@ -18,7 +18,7 @@ CHOICE=$(echo -e "$OPTIONS" | rofi -dmenu -i \
     -theme ~/.config/rofi/walker.rasi \
     -theme-str 'inputbar { children: [ "entry" ]; }' \
     -theme-str 'listview { lines: 1; }' \
-    -theme-str 'entry { placeholder: "SeZenith..."; }')
+    -theme-str 'entry { placeholder: "Search..."; }')
 
 # 5. Exit Check
 [[ -z "$CHOICE" ]] && exit 0

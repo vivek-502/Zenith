@@ -55,7 +55,7 @@ entry {
     text-color:                  @foreground;
     cursor:                      none;
     cursor-width: 0px;
-    placeholder:                 " SeZenith...";
+    placeholder:                 " Search...";
     placeholder-color:           inherit;
 }
 

@@ -12,7 +12,7 @@ FONTS=$(fc-list : family | cut -d, -f1 | sort -u)
 SELECTED_FONT=$(echo "$FONTS" | rofi -dmenu -i \
     -theme ~/.config/rofi/walker.rasi \
     -theme-str 'inputbar { children: [ "entry" ]; }' \
-    -theme-str 'entry { placeholder: "SeZenith Fonts..."; }')
+    -theme-str 'entry { placeholder: "Search Fonts..."; }')
 
 # 4. Exit Check
 [[ -z "$SELECTED_FONT" ]] && exit 0

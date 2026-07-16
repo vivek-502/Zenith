@@ -4,7 +4,7 @@
 kitty --class floating-terminal -- bash -c '
   WATCH_ANIME () {
     echo ""
-    read -p "SeZenith anime: " anime
+    read -p "Search anime: " anime
     read -p "dub/sub: " lang
 
     if [ "$lang" == "dub" ]; then

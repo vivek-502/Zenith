@@ -34,7 +34,7 @@ mainbox {
     children: [listview, inputbar];
 }
 
-/* --- Top SeZenith Bar --- */
+/* --- Top Search Bar --- */
 inputbar {
     background-color: @input-background;
     border-radius: 20px;

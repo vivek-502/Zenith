@@ -26,13 +26,13 @@ window {
 }
 
 mainbox {
-    /* Main Layout: Top (SeZenith) and Bottom (Split List/Preview) */
+    /* Main Layout: Top (Search) and Bottom (Split List/Preview) */
     children: [ inputbar, content-box ];
     padding: 24px;
     spacing: 20px;
 }
 
-/* --- SeZenith Bar --- */
+/* --- Search Bar --- */
 inputbar {
     background-color: transparent;
     border: 0px;
@@ -45,7 +45,7 @@ inputbar {
 }
 
 entry {
-    placeholder: " SeZenith...";
+    placeholder: " Search...";
     cursor-width: 0px;
     placeholder-color: @bordercolor;
     text-color: @foreground;

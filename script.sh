@@ -52,12 +52,12 @@ PACMAN_CORE=(hyprland wayland wayland-protocols xdg-desktop-portal-hyprland qt5-
 [ "$INSTALL_SDDM" = true ] && PACMAN_CORE+=("sddm")
 
 NETWORK_PKGS=(networkmanager wpa_supplicant wireless_tools network-manager-applet)
-BLUETOOTH_PKGS=(bluez bluez-utils blueman bluez-obex bluez-libs)
-AUDIO_PKGS=(pipewire wiremix pipewire-pulse pipewire-alsa)
+BLUETOOTH_PKGS=(bluez bluez-utils blueman bluez-obex)
+AUDIO_PKGS=(pipewire pipewire-pulse pipewire-alsa)
 DESKTOP_ESSENTIALS=(polkit-gnome brightnessctl power-profiles-daemon)
 HYPR_DEPS=(firefox unzip grim slurp kitty nautilus waybar rofi-wayland python-pywal imagemagick swaync awww hypridle hyprlock hyprpicker hyprshot cliphist mpv jq viewnior gnome-text-editor)
-FONTS=(noto-fonts noto-fonts-emoji noto-fonts-extra ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd)
-AUR_PKGS=(ani-cli ocr4linux-git)
+FONTS=(noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-dejavu ttf-liberation ttf-roboto ttf-jetbrains-mono-nerd)
+AUR_PKGS=(ani-cli wiremix ocr4linux-git)
 
 # --- Installation ---
 echo "Installing necessary packages..."
@@ -76,12 +76,12 @@ sudo pacman -Rns mako dunst --noconfirm 2>/dev/null || true
 
 # --- Config Deployment ---
 echo "Applying new configurations..."
-CONFIG_DIRS=(rofi swaync hypr waybar gtk-3.0 gtk-4.0 kitty arch)
+CONFIG_DIRS=(rofi swaync hypr waybar gtk-3.0 gtk-4.0 kitty Zenith)
 
 # Fix: Use SCRIPT_DIR for bashrc
 if [ -f "$SCRIPT_DIR/.bashrc" ]; then
     cp -f "$SCRIPT_DIR/.bashrc" ~/.bashrc
-    
+
 fi
 
 for dir in "${CONFIG_DIRS[@]}"; do
@@ -93,7 +93,6 @@ for dir in "${CONFIG_DIRS[@]}"; do
         cp -rf "$SCRIPT_DIR/$dir/"* "$HOME/.config/$dir/"
     fi
 done
-
 
 # --- Final Prompt ---
 echo ""

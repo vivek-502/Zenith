@@ -24,35 +24,45 @@ window#waybar {
 }
 
 /* --- TOP MODULE (Power & Workspaces) --- */
+/* --- THE "ISLANDS" --- */
+
+.modules-center, .modules-right {
+    background-color: @overlay_background;
+    border-radius: 7px;
+    padding: 10px 0px;   /* REDUCED horizontal padding from 4px to 0px */
+    margin: 5px 2px;     /* REDUCED side margins from 5px to 2px */
+    color: @foreground;
+}
 
 #custom-logo {
-    margin-bottom: 0px;
-    padding: 10px 2px 10px 0px;
-    margin: 5px 5px;
+    margin: 5px 2px;     /* REDUCED side margins */
+    padding: 10px 0px;   /* REDUCED horizontal padding */
     background: @overlay_background;
     border-radius: 7px;
     color: @foreground;
-
     font-size: 15px;
 }
 
 #workspaces {
     background: transparent;
-    margin: 5px 5px;
+    margin: 5px 2px;     /* REDUCED side margins */
     background: @overlay_background;
     border-radius: 7px;
-    padding: 10px 4px;
-
+    padding: 10px 0px;   /* REDUCED horizontal padding */
     color: @foreground;
 }
 
 #workspaces button {
     background: @background;
-    padding: 5px 8px;
-    margin: 2px 0;
-    border-radius: 7px; /* Circular hover effect */
-
+    padding: 5px 4px;    /* REDUCED horizontal padding inside button */
+    margin: 2px 2px;     /* Added side margin to keep them centered */
+    border-radius: 5px;
     color: @foreground;
+}
+
+#tray {
+    margin-bottom: 7px;
+    padding: 0px 2px;    /* Added padding to prevent icon clipping */
 }
 
 #workspaces button.active {
@@ -98,8 +108,4 @@ window#waybar {
 /* Remove default borders and backgrounds */
 #waybar.empty #window {
     background-color: transparent;
-}
-
-#tray {
-    margin-bottom: 7px;
 }

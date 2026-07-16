@@ -90,7 +90,7 @@ entry {
     background-color:            @background;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "SeZenith";
+    placeholder:                 "Search";
     placeholder-color:           inherit;
 
     border-radius: 7px;
